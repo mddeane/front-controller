@@ -64,6 +64,8 @@
 	</dependencies>
 
 	<build>
+	
+	<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<!-- need this plugin to get rid of an error in pom file -->
 			<plugin>

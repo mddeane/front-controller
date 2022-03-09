@@ -42,7 +42,7 @@ public class RequestHelper {
 			response.setContentType("text/html");
 			
 			out.println("<h1>Welcome " + e.getFirstName() + "!</h1>");
-			out.println("<h3>Tiy have successfully logged in</h3>");
+			out.println("<h3>You have successfully logged in</h3>");
 			out.println(om.writeValueAsString(e));
 		} else {
 			
