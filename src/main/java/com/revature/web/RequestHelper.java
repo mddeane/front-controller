@@ -52,7 +52,7 @@ public class RequestHelper {
 			response.setStatus(204); // 2xx level code means successful connection to the server - but no content to be returned
 		}
 		
-	}
+	}  
 
 	public static void processEmployees(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
