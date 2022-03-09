@@ -9,15 +9,24 @@
 	<h1>Welcome, Employee!</h1>
 	<h3>Please login below.</h3>
 
-	<form method="POST" action="login">
+	<!--  we need to create a form to take in parameters and pass the value of the 
+		parameters to a servlet. The servelt will call the EmployeeService which calls the DAO
+		and will return the Employee Object if it exists or not -->
+
+	<!-- POST hides parameters -->
+	
+	<form method="POST" action="login"> <!-- sends this request to http://locahost:8080/FrontController/login -->
 		<label>Username:</label> 
-		<input type="text" name="username" placeholder="Enter a username please"> 
+		<input type="text" name="username" placeholder="Enter a username please">
+		<br /> 
 		<label>Password:</label>
 		<input type="password" name="password" placeholder="Enter a password please"> 
 		<input type="submit" value="login!"> 
 	</form>
 
-	<form method="GET" action="employees">
+	<!-- This will be another form with a button
+		that the user can click to view all employees in the database -->
+	<form method="GET" action="employees"> <!-- sends this request to http://locahost:8080/FrontController/employees -->
 		<p>To see all employees in the system, please click below</p>
 		<input type="submit" value="Click me!"> 
 	</form>

@@ -63,7 +63,7 @@
 	
 		<build>
 		<plugins>
-		<!-- needeed this plugin to get rid of an error in my pom file -->
+		<!-- need this plugin to get rid of an error in pom file -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>

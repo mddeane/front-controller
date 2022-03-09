@@ -7,6 +7,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/**
+ * We need to make this a persistent class by marking it with the JPA annotations
+ * 
+ * 
+ *
+ */
+
 @Entity
 @Table(name="employees")
 public class Employee {
@@ -24,8 +32,10 @@ public class Employee {
 	@Column(unique=true)
 	private String username;
 
-	@Column(name="pwd")
+	@Column(name="pwd")  // use pwd because password is a reserved keyword in postgres
 	private String password;
+	
+	// 3 constructors: no args, full args, 1 with all args but no id
 	
 	public Employee() {
 		super();

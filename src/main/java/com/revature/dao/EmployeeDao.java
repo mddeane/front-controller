@@ -10,13 +10,14 @@ import com.revature.util.HibernateUtil;
 
 public class EmployeeDao {
 
+	// insert th eemployee object by calling the save() method from Hibernate, return the PK generated
 	public int insert(Employee e) {
 	
 		// grab the session object
 		Session ses = HibernateUtil.getSession();
 		
 		// begin a tx
-		Transaction tx = ses.beginTransaction();
+		Transaction tx = ses.beginTransaction(); // importr Transaction from Hibernate
 		
 		// capture the pk returned
 		int pk = (int) ses.save(e);
@@ -28,6 +29,7 @@ public class EmployeeDao {
 		return pk;
 	}
 	
+	// findAll() method that returns a list of Employees
 	public List<Employee> findAll() {
 		// grab the session
 		Session ses = HibernateUtil.getSession();
